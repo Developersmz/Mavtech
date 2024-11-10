@@ -1,0 +1,48 @@
+{{!-- CSS --}}
+<link rel="stylesheet" href="/css/auth.css">
+
+<main class="main">
+   <div class="container">
+     <div class="bg-img"></div>
+     <div class="row">
+       <div class="form">
+         <div class="section-title">
+           <h2>Criar uma Conta</h2>
+         </div>
+ 
+         <form action="/auth/signUp" method="POST">  
+           <div class="form-group">
+             <label for="username">Nome de usuário</label>
+             <input type="text" id="username" name="username" class="form-control" required>
+           </div>
+ 
+           <div class="form-group">
+             <label for="email">Email</label>
+             <input type="email" id="email" name="email" class="form-control" required>
+           </div>
+ 
+           <div class="form-group">
+             <label for="password">Senha</label>
+             <input type="password" id="password" name="password" class="form-control" required>
+           </div>
+ 
+           <div class="form-group">
+             <label for="confirmPassword">Confirme a senha</label>
+             <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+           </div>
+
+            {{#if error}}
+              <div class="alert alert-danger">
+                <p>{{error}}</p>
+              </div>
+            {{/if}}
+ 
+           <button type="submit" class="form-control">Inscrever-se</button>
+           <p class="bottom-sec">
+            Já tem uma conta? <a href="/auth/signin">Entrar</a>
+           </p>
+         </form>
+       </div>
+     </div>
+   </div>
+ </main>

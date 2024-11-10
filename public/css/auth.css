@@ -1,0 +1,202 @@
+:root {
+  --bg: #ddd;
+  --color: #000000;
+  --main-color: #dc1414;
+}
+
+.dark-theme {
+  --bg: #2a2a2b;
+  --color: #fdfdfd;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+}
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.6;
+  z-index: -1;
+  min-height: 110vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+main {
+  overflow: hidden;
+}
+main .alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+main .alert-success {
+  background-color: rgba(76, 175, 80, 0.6);
+  color: white;
+  border: 1px solid rgba(76, 175, 80, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+main .alert-success:hover {
+  background-color: rgba(76, 175, 80, 0.8);
+}
+main .alert-danger {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+main .alert-danger:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.container .bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 110vh;
+  background-image: url("../img/bg-5.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.container .section-title {
+  padding: 0 0 30px 0;
+}
+.container .section-title h2 {
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+}
+.container .form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  width: 50%;
+  margin: 10px auto;
+  padding: 50px;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .container .form {
+    width: 95%;
+    margin: 30% auto;
+  }
+}
+.container .form label {
+  color: #fff;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+.container .form .form-control {
+  height: 45px;
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(204, 204, 204, 0.2039215686);
+  font-size: 16px;
+  font-family: inherit;
+  text-transform: initial;
+  color: white;
+  font-weight: 300;
+}
+.container .form .form-control:focus {
+  border-color: rgba(220, 20, 20, 0.2039215686);
+}
+.container .form button {
+  cursor: pointer;
+  font-family: inherit;
+}
+.container .form .bottom-sec {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  border-bottom: 2px solid #cccccc36;
+  padding: 5px 0;
+  margin: 0 20px;
+}
+.container .form .bottom-sec:last-child{
+  border: none;
+}
+.container .form a {
+  color: #ccc;
+  font-family: inherit;
+}
+.container .form .logout p {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.container .form .logout a {
+  color: #ccc;
+}
+
+/*# sourceMappingURL=auth.css.map */

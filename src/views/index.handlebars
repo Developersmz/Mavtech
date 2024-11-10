@@ -1,0 +1,603 @@
+{{!-- CSS & OTHERS LINKS --}}
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/fontawesome.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<main class="layout">
+        <!-- Nav content --> 
+        <header class="header">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="logo">
+                        <a href="/">mavtechnology</a>
+                    </div>
+                    <div class="navsearch">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Programas, projetos...">
+                        <label for="searchInput" class="search-label" id="searchButton"><i class="fas fa-search"></i></label>
+                    </div>
+                    <div class="navshower">
+                        <a class="navshower"><span id="nav-shower-btn" class="fas fa-caret-down"></span></a>
+                    </div>
+                    <!-- Nav container -->
+                    <div class="nav-container">
+                        <!-- Theme -->
+                        <div class="theme">
+                            <span></span>
+                        </div>
+                        <!-- Theme -->
+                        <!-- Nav -->
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#home" class="nav-item">home</a></li>
+                                <li><a href="#programs" class="nav-item">programs</a></li>
+                                <li><a href="#services" class="nav-item">services</a></li>
+                                <li><a href="#testimonies" class="nav-item">testemunhos</a></li>
+                                <li><a href="#blog" class="nav-item">blog</a></li>
+                                <li><a href="#about" class="nav-item">about</a></li>
+                                <li><a href="#contact" class="nav-item">contact</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Nav -->
+                    </div>
+                    <!-- Nav container -->
+                </div>
+            </div>
+        </header>
+        <!-- /Nav content -->
+        <!-- Home -->
+        <div class="home sec" id="home" data-keywords="compromisso meta valores">
+            <div class="container">
+                <div class="row h-100 align-items-center align-content-center">
+                    <div class="short-text">
+                        {{#home}}
+                            <h1>{{companyname}}</h1>
+                            <p><i class="fas fa-quote-left"></i>{{companytext}}<i class="fas fa-quote-right"></i></p>
+                        {{/home}}
+                        <div class="about-btn">
+                            <a href="#about" class="btn btn-1">about us</a>
+                        </div>
+                    </div>
+                    <div class="compromises">
+                        <div class="section-title">
+                            <h3>Nossos compromissos</h3>
+                        </div>
+                        <div class="compromise">
+                            <!-- Compromise -->
+                            <div class="compromise-item">
+                                <div class="image">
+                                    <img src="./img/bg-1.jpg" alt="">
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="comp">
+                                    {{#home}}
+                                    <h5>
+                                        {{ourvision}}
+                                    </h5>
+                                    {{/home}}
+                                </div>
+                                <div class="comp-intro">
+                                    {{#home}}
+                                    <p><i class="fas fa-quote-left"></i>{{ truncate visiontext 20 }}<i class="fas fa-quote-right"></i></p>
+                                    {{/home}}
+                                </div>
+                                <div class="comp-button">
+                                    <a class="btn btn-2">ver tudo</a>
+                                </div>
+                                <div class="comp-content">
+                                    {{#home}}
+                                    <p>
+                                        {{visiontext}}
+                                    </p>
+                                    {{/home}}
+                                </div>
+                            </div>
+                            <!-- /Compromise -->
+                            <!-- Compromise -->
+                            <div class="compromise-item">
+                                <div class="image">
+                                    <img src="./img/bg-1.jpg" alt="">
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div class="comp">
+                                    {{#home}}
+                                    <h5>
+                                        {{ourmission}}
+                                    </h5>
+                                    {{/home}}
+                                </div>
+                                <div class="comp-intro">
+                                    {{#home}}
+                                        <p><i class="fas fa-quote-left"></i>{{ truncate missiontext 20 }}<i class="fas fa-quote-right"></i></p>
+                                    {{/home}}
+                                </div>
+                                <div class="comp-button">
+                                    <a class="btn btn-2">ver tudo</a>
+                                </div>
+                                <div class="comp-content">
+                                    {{#home}}
+                                    <p>
+                                        {{missiontext}}
+                                    </p>
+                                    {{/home}}
+                                </div>
+                            </div>
+                            <!-- /Compromise -->
+                            <!-- Compromise -->
+                            <div class="compromise-item">
+                                <div class="image">
+                                    <img src="./img/bg-1.jpg" alt="">
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="comp">
+                                    {{#home}}
+                                    <h5>
+                                        {{ourvalues}}
+                                    </h5>
+                                    {{/home}}
+                                </div>
+                                <div class="comp-intro">
+                                    {{#home}}
+                                        <p><i class="fas fa-quote-left"></i>{{ truncate valuestext 20 }}<i class="fas fa-quote-right"></i></p>
+                                    {{/home}}
+                                </div>
+                                <div class="comp-button">
+                                    <a class="btn btn-2">ver tudo</a>
+                                </div>
+                                <div class="comp-content">
+                                    {{#home}}
+                                    <p>
+                                        {{valuestext}}
+                                    </p>
+                                    {{/home}}
+                                </div>
+                            </div>
+                            <!-- /Compromise -->
+                        </div>
+                    </div>
+                    <!-- /Heart of company -->
+                </div>
+            </div>
+        </div>
+        <!-- /Home -->
+        <!-- Programs -->
+        <div class="programs sec" id="programs" data-keywords="desenvolvimento programas empresas">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>programs</h2>
+                    </div>
+                    <div class="about-content">
+                        {{#programs}}
+                        <div>
+                            <p>{{label}}</p>
+                        </div>
+                        {{/programs}}
+                    </div>
+                    <!-- Programs Content -->
+                    <div class="programs-content">
+                        <div class="programs-card">
+                            {{#if programs}}
+                                {{#each programs}}
+                                    {{#if this.category}}
+                                    <!-- Program -->
+                                    <div class="program">
+                                        <div class="icon"><span ><i class="{{this.icon}}"></i></span></div>
+                                        <div class="title">
+                                            <h3>{{this.category}}</h3>
+                                            <h4>{{this.name}}</h4>
+                                        </div>
+                                        <div class="this">
+                                            <p>
+                                                {{this.description}}
+                                            </p>
+                                        </div>
+                                        <div class="go-to-website">
+                                            <a href="{{link}}" class="btn btn-5">visitar programa</a><i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                    <!-- /Program -->
+                                    {{/if}}
+                                {{/each}}
+                                {{else}}
+                                    <h4 style="color: red; width: 100%; text-align: center;">Nenhum programa ainda</h4>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <!-- /Programs Content -->
+                </div>
+            </div>
+        </div>
+        <!-- /Programs -->
+        <!-- Services -->
+        <div class="services sec" id="services" data-keywords="projetos servicos trabalhos desenvolvidos">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>services</h2>
+                    </div>
+                    <div class="content">
+                        {{#services}}
+                            <p>{{label}}</p>
+                        {{/services}}
+                    </div>
+                    <div class="swiper-container">
+                        <!-- Top Projects -->
+                        <div class="swiper-wrapper">
+                            {{#if services}}
+                                {{#each services}}
+                                    {{#if name}}
+                                        <!-- Project -->
+                                        <div class="swiper-slide">
+                                            <div class="logo"><span class="{{icon}}"></span></div>
+                                            <div class="title">
+                                                <h4>{{name}}</h4>
+                                            </div>
+                                            <div class="obj">
+                                                <p>{{objective}}</p>                                
+                                            </div>
+                                            <div class="program-copyright">
+                                                <a href="#">{{program}}</a>
+                                            </div>
+                                            <div class="go-to-website">
+                                                <a href="{{programLink}}" class="btn btn-4">visitar website</a><i></i>
+                                            </div>
+                                        </div>
+                                        <!-- /Project -->
+                                    {{/if}}
+                                {{/each}}
+                                    {{else}}
+                                            <h4 style="color: red; width: 100%; text-align: center;">Nenhum serviço ainda</h4>
+                            {{/if}}
+                            <!-- Indicators -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!-- /Top Projects -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Services -->
+        <!-- Testimony -->
+         <div class="testimony sec" id="testimonies" data-keywords="testimony testemunhos usuário">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>Testimony</h2>
+                    </div>
+                    <div class="testi-intro">
+                        {{#testimonies}}
+                        <p>{{label}}</p>
+                        {{/testimonies}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="testimonials">
+                        {{#if testimonies}}
+                            {{#each testimonies}}
+                                {{#if author}}
+                                    <!-- Testimony item -->
+                                    <div class="testi-item">
+                                        <div class="testi-author">
+                                            <h3>{{author}}</h3>
+                                        </div>
+                                        <div class="message">
+                                            <p>{{message}}</p>
+                                        </div>
+                                        <div class="ratings">
+                                            {{#each (range 1 5)}}
+                                                {{#if (isStar ../rating @index)}}
+                                                    <i class="fas fa-star"></i>
+                                                {{else}}
+                                                    <i class="fas fa-star" style="color: #dc143c52;"></i>
+                                                {{/if}}
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                    <!-- Testimony item -->
+                                {{/if}}
+                            {{/each}}
+                                {{else}}
+                                    <h4 style="color: red; width: 100%; text-align: center;">Nenhum testemunho ainda</h4>
+                        {{/if}}
+                    </div>
+                    {{#if user}}
+                        {{#unless user.isAdmin}}
+                            <div class="add-testi">
+                                <button type="button" class="btn btn-4">adicionar</button>
+                            </div>
+                        {{/unless}}
+                    {{/if}}
+                </div>
+                <div class="add-new-testi">
+                    <div class="close-section">
+                        <button class="close-btn-toggler">
+                            <span class="fas fa-close"></span>
+                        </button>
+                    </div>
+                    <div class="testi-form">
+                        <form action="/admin/dashboard/add/testi" method="post">
+                            <div class="input-group">
+                                <label for="name">username</label>
+                                <input type="text" id="name" name="author" class="form-control" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="text">mensagem</label>
+                                <textarea name="message" id="text" class="form-control" required></textarea>
+                            </div>
+                            <div class="input-group">
+                                <label for="classif">classificação [ 1 - 5 ]</label>
+                                <input type="number" name="rating" min="1" max="5" class="form-control" required>
+                            </div>
+                            <div class="input-group">
+                                <button type="submit" class="btn btn-2">enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </div>
+        <!-- /Testimony -->
+        <!-- Blog -->
+        <div class="blog sec" id="blog" data-keywords="blog notícias atualizações">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>blog</h2>
+                    </div>
+                    <div class="blog-intro">
+                        {{#blogs}}
+                        <p>{{label}}</p>
+                        {{/blogs}}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="blog-content">
+                        <div class="blog-news">
+                            <!-- News -->
+                            <div class="newsletter">
+                                {{#each blogs}}
+                                    {{#if title}}
+                                        <!-- News content -->
+                                        <div class="news" onclick="openNews(this)">
+                                            {{#if this.image}}
+                                            <div class="news-img">
+                                                <img src="{{this.image}}" alt="imagem do blog {{this.title}}">
+                                            </div>
+                                            {{/if}}
+                                            <div class="news-content">
+                                                <div class="title">
+                                                    <h3>{{title}}</h3>
+                                                </div>
+                                                <div class="content">
+                                                    <p>{{news}}</p>
+                                                </div>
+                                                <div class="website">
+                                                    <p><a class="btn btn-4" id="check-news">click to check news</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{/if}}
+                                        {{else}}
+                                            <h4 style="color: red; width: 100%; text-align: center;">Nenhuma notícia ainda</h4>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="news-modal" style="display: none;">
+                            <div class="modal-content">
+                                <div class="close">
+                                    <span id="close-news"><i class="fas fa-close"></i></span>
+                                </div>
+                                <div class="modal-item">
+                                    <h3 id="news-title"></h3>
+                                </div>
+                                <div class="modal-item">
+                                    <p id="news-content"></p>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- /News -->
+                    </div>
+                    <!-- /Blog Content -->
+                </div>
+            </div>
+        </div>
+        <!-- /Blog -->
+        <!-- About -->
+        <div class="about sec" id="about" data-keywords="sobre empresa nossa história">
+            <div class="about-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>about</h2>
+                    </div>
+                    <div class="about-company">
+                        {{#about}}
+                            <div class="our-name">
+                                <h1>{{intro}}</h1>
+                            </div>
+                            <div class="our-storie">
+                                <p>{{text}}</p>
+                            </div>
+                        {{/about}}
+                        <div class="go-to-next-sec">
+                            <button type="button" class="btn btn-2">nossos programas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /About -->
+        <!-- Contact -->
+        <div class="contact sec" id="contact" data-keywords="contato links contactar-nos">
+            <div class="contact-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>contact</h2>
+                    </div>
+                    <div class="contact-intro">
+                        <p>Fale conosco</p>
+                    </div>
+                    <!-- Social Links -->
+                    <div class="follow-us">
+                        <h4>follow us</h4>
+                        <img src="img/bg-2.jpg" alt="">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.whatsapp.com/developersmz" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <!-- Mobile -->
+                    <div class="mobile">
+                        <div class="mobile-item">
+                            <span>@mavtech596</span>
+                            <span>+ 258 850 151 183</span>
+                            <span>+ 258 875 338 427</span>
+                        </div>
+                    </div>
+                    <!-- /Mobile -->
+                    </div>
+                    <!-- /Social Links -->
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div id="successMessage" style="display: none;"></div>
+                            <div id="errorMessage" style="display: none;"></div>
+                            <div class="input-group">
+                                <input type="text" placeholder="Name" name="name" class="form-control" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" placeholder="E-mail" name="email" class="form-control" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" placeholder="Number" name="number" class="form-control" required>
+                            </div>
+                            <div class="input-group">
+                                <textarea placeholder="Message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-1">enviar</button>
+                        </form>
+                    </div>
+                    <!-- /Contact Form -->
+                </div>
+            </div>
+        </div>
+        <!-- /Contact -->
+        <!-- Footer -->
+        <footer class="footer sec">
+            <div class="footer-container">
+              
+              <!-- About Section -->
+              <div class="footer-about">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/mavtech/terms_conditions">Termos & Condições</a></li>
+                    <li><a href="/mavtech/privacy_policy">Política e Privacidade</a></li>
+                  </ul>
+              </div>
+              
+              <!-- Quick Links -->
+              <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#blog">Newsletter</a></li>
+                  <li><a href="#testimonies">Testimonies</a></li>
+                  {{#if user.username}}
+                    <li><a href="/auth/signout">Terminar sessão</a></li>
+                    {{#if user.isAdmin}}
+                        <li><a href="/admin/dashboard">Área administrativa</a></li>
+                    {{/if}}
+                    {{else}}
+                        <li><a href="/auth/signin">Entrar</a></li>
+                        <li><a href="/auth/signup">Inscrever-se</a></li>
+                    {{/if}}
+                </ul>
+              </div>
+              
+              <!-- Contact Info -->
+              <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Phone: (+258) 850 115 183 | 875 338 427</p>
+                <p>Email: <a href="">@mavtech596</a></p>
+              </div>
+              
+              <!-- Social Media -->
+              <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+
+              <!-- Social Media -->
+              <div class="footer-hightlight">
+                <h3>Highlights</h3>
+                <ul>
+                    {{#each highlights}}
+                        {{#if highlight}}
+                            <li><a href="{{link}}" target="_blank">{{highlight}}</a></li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+              </div>
+              
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2024 Mavtechnology All rights reserved. | <a href="/mavtech/privacy_policy">Política e Privacidade</a> | <a href="/mavtech/terms_conditions">Termos & Condições</a></p>
+            </div>
+          </footer>
+        <!-- /Footer -->
+
+        <script>
+            // Send email
+            document.getElementById('contactForm').addEventListener('submit', async function (e) {
+                e.preventDefault()
+
+                const success = document.getElementById('successMessage')
+                const errormessage = document.getElementById('errorMessage')
+
+                const formData = new FormData(this)
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    number: formData.get('number'),
+                    message: formData.get('message')
+                }
+
+                try {
+                    const response = await fetch('/auth/contactEmail', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+
+                    const result = await response.json()
+                    
+                    success.style.display="block"
+                    success.textContent = result.message
+                    
+                } catch (error) {
+                    console.log('Erro: ', error)
+                    errormessage.style.display="block";
+                    errormessage.textContent = "Erro ao enviar o e-mail. Tente novamente mais tarde";
+                }
+            })
+        </script>
+
+        {{!-- JS & OTHERES SCRIPTS --}}
+        <script src="/js/script.js"></script>
+</main>
