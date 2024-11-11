@@ -604,6 +604,7 @@ body.dark-theme {
   margin: auto;
   padding: 15px;
   width: calc(33.3333333333% - 30px);
+  min-height: 450px;
 }
 @media (max-width: 600px) {
   .home .compromises .compromise .compromise-item {
