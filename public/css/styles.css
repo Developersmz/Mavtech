@@ -813,8 +813,6 @@ body.dark-theme {
 .services p {
   font-size: 17px;
   color: var(--color);
-  margin: 10px;
-  padding: 10px;
 }
 .services p::first-letter {
   text-transform: capitalize;
@@ -951,9 +949,10 @@ body.dark-theme {
   font-family: inherit;
 }
 .testimony .testi-intro {
-  width: 100%;
   margin: 10px 20px;
-  padding: 10px 20px;
+  padding: 10px;
+  height: max-content;
+  width: 100%;
 }
 .testimony .testi-intro p {
   font-size: 1.2rem;
@@ -1023,9 +1022,10 @@ body.dark-theme {
   text-transform: capitalize;
 }
 .blog .blog-intro {
-  width: 100%;
   margin: 10px 20px;
-  padding: 10px 20px;
+  padding: 10px;
+  height: max-content;
+  width: 100%;
 }
 .blog .blog-intro p {
   font-size: 1.2rem;

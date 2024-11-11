@@ -48,6 +48,10 @@ const Home = conn.sequelize.define('Home', {
         type: DataTypes.TEXT,
         allowNull: true
     },
+    visionImg: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     ourvision: {
         type: DataTypes.STRING,
         allowNull: true
@@ -56,12 +60,20 @@ const Home = conn.sequelize.define('Home', {
         type: DataTypes.TEXT,
         allowNull: true
     },
+    missionImg: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     ourmission: {
         type: DataTypes.STRING,
         allowNull: true
     },
     missiontext: {
         type: DataTypes.TEXT,
+        allowNull: true
+    },
+    valuesImg: {
+        type: DataTypes.STRING,
         allowNull: true
     },
     ourvalues: {
@@ -192,13 +204,13 @@ const Highlight = conn.sequelize.define('Highlight', {
     }
 })
 
-// conn.sequelize.sync({ alter: true })
-//     .then(() => {
-//         console.log('Banco de dados sincronizado e modelo atualizado.');
-//     })
-//     .catch((err) => {
-//         console.log('Erro ao sincronizar o banco de dados:', err);
-// });
+Home.sync({ alter: true })
+    .then(() => {
+        console.log('Banco de dados sincronizado e modelo atualizado.');
+    })
+    .catch((err) => {
+        console.log('Erro ao sincronizar o banco de dados:', err);
+});
 
 module.exports = {
     User: User,

@@ -39,28 +39,17 @@ router.get('/dashboard/add', checkLogin, checkAdmin, async (req, res) => {
     res.render('add')
 })
 
-router.post('/dashboard/add', async (req, res) => {
+router.post('/dashboard/add/values', upload.single('image'), async (req, res) => {
     switch (req.body.hidden) {
-        case "homeContent": {
-            const { homename, hometext } = req.body
-            const data = {
-                companyname: homename,
-                companytext: hometext
-            }
-            Home.update(data, { where: {} })
-            .then(([affectedRows]) => {
-                if (affectedRows === 0) {
-                    return Home.create(data)
-                }
-                res.render('status', { success: "Tabela atualizada com sucesso!"})
-            }).catch((e) => res.render('status', { error: `Erro: ${e}` }))
-            break
-        }
         case "compVision": {
             const { visionname, visiontext } = req.body
+
+            const imagePath = req.file ? req.file.location : null
+
             const data = {
                 ourvision: visionname,
-                visiontext: visiontext
+                visiontext: visiontext,
+                visionImg: imagePath
             }
             Home.update(data, { where: {} })
             .then(([affectedRows]) => {
@@ -73,9 +62,13 @@ router.post('/dashboard/add', async (req, res) => {
         }
         case "compMission": {
             const { missionname, missiontext } = req.body
+
+            const imagePath = req.file ? req.file.location : null;
+
             const data = {
                 ourmission: missionname,
-                missiontext: missiontext
+                missiontext: missiontext,
+                missionImg: imagePath
             }
             Home.update(data, { where: {} })
             .then(([affectedRows]) => {
@@ -88,9 +81,32 @@ router.post('/dashboard/add', async (req, res) => {
         }
         case "compValues": {
             const { valuename, valuetext } = req.body
+
+            const imagePath = req.file ? req.file.location : null;
+
             const data = {
                 ourvalues: valuename,
-                valuestext: valuetext
+                valuestext: valuetext,
+                valuesImg: imagePath
+            }
+            Home.update(data, { where: {} })
+            .then(([affectedRows]) => {
+                if (affectedRows === 0) {
+                    return Home.create(data)
+                }
+                res.render('status', { success: "Tabela atualizada com sucesso!"})
+            }).catch((e) => res.render('status', { error: `Erro: ${e}` }))
+            break
+        }
+    }
+})
+router.post('/dashboard/add', async (req, res) => {
+    switch (req.body.hidden) {
+        case "homeContent": {
+            const { homename, hometext } = req.body
+            const data = {
+                companyname: homename,
+                companytext: hometext
             }
             Home.update(data, { where: {} })
             .then(([affectedRows]) => {

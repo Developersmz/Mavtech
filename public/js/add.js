@@ -48,22 +48,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="form">
 
-                    <form method="post" action="/admin/dashboard/add">
+                    <form method="post" action="/admin/dashboard/add/values" enctype="multipart/form-data">
                         <div class="input-group">
                             <input type="hidden" name="hidden" value="compVision">
                             <label for="vs-nm">vision</label>
-                            <input type="text" id="vs-nm" name="visionname" required>
+                            <input type="text" id="vs-nm" name="visionname">
                         </div>
                         <div class="input-group">
                             <label for="vs-txt">vision text</label>
-                            <input type="text" id="vs-txt" name="visiontext" required>
+                            <input type="text" id="vs-txt" name="visiontext">
+                        </div>
+                        <div class="input-group">
+                            <label for="vs-img">vision img</label>
+                            <input type="file" id="vs-img" name="image" accept="image/*>
                         </div>
                         <div class="input-group">
                             <button type="submit" class="button">Save Vision</button>
                         </div>
                     </form>
 
-                    <form method="post" action="/admin/dashboard/add">
+                    <form method="post" action="/admin/dashboard/add/values" enctype="multipart/form-data">
                         <div class="input-group">
                             <input type="hidden" name="hidden" value="compMission">
                             <label for="mss-nm">mission</label>
@@ -74,11 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
                             <input type="text" id="mss-txt" name="missiontext" required>
                         </div>
                         <div class="input-group">
+                            <label for="mss-img">mission img</label>
+                            <input type="file" id="mss-img" name="image" accept="image/*>
+                        </div>
+                        <div class="input-group">
                             <button type="submit" class="button">Save Mission</button>
                         </div>
                     </form>
 
-                    <form method="post" action="/admin/dashboard/add">
+                    <form method="post" action="/admin/dashboard/add/values" enctype="multipart/form-data">
                         <div class="input-group">
                             <input type="hidden" name="hidden" value="compValues">
                             <label for="val-nm">values</label>
@@ -87,6 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="input-group">
                             <label for="val-txt">values text</label>
                             <input type="text" id="val-txt" name="valuetext" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="val-img">values img</label>
+                            <input type="file" id="val-img" name="image" accept="image/*>
                         </div>
                         <div class="input-group">
                             <button type="submit" class="button">Save Values</button>
