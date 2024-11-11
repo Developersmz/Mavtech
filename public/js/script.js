@@ -61,19 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("dark-theme")
     } else {
         localStorage.setItem("theme", "light")
-    }
-
-    const addTestBtn = document.querySelector('.add-testi')
-    const closeNewTestBtn = document.querySelector(".close-btn-toggler")
-    
-    addTestBtn.addEventListener("click", () => {
-        document.querySelector(".add-new-testi").style.display="grid"
-    })
-
-    closeNewTestBtn.addEventListener("click", () => {
-        document.querySelector(".add-new-testi").style.display="none"
-    })
-      
+    } 
 
     // Show all compromise content
     const allBtn = document.querySelectorAll(".comp-button a")
@@ -109,6 +97,17 @@ document.addEventListener("DOMContentLoaded", () => {
           clickable: true,
         },
       });
+
+    const addTestBtn = document.querySelector('.add-testi')
+    const closeNewTestBtn = document.querySelector(".close-btn-toggler")
+    
+    addTestBtn.addEventListener("click", () => {
+        document.querySelector(".add-new-testi").style.display="grid"
+    })
+
+    closeNewTestBtn.addEventListener("click", () => {
+        document.querySelector(".add-new-testi").style.display="none"
+    })
 
 })
 
