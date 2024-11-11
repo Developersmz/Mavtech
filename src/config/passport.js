@@ -42,7 +42,7 @@ function checkLogin(req, res, access) {
     if (req.session.userId) {
         access()
     } else {
-        res.redirect('/auth/login')
+        res.redirect('/auth/signin')
     }
 }
 

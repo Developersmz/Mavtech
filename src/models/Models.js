@@ -204,13 +204,13 @@ const Highlight = conn.sequelize.define('Highlight', {
     }
 })
 
-Home.sync({ alter: true })
-    .then(() => {
-        console.log('Banco de dados sincronizado e modelo atualizado.');
-    })
-    .catch((err) => {
-        console.log('Erro ao sincronizar o banco de dados:', err);
-});
+// conn.sequelize.sync({ alter: true })
+//     .then(() => {
+//         console.log('Banco de dados sincronizado e modelo atualizado.');
+//     })
+//     .catch((err) => {
+//         console.log('Erro ao sincronizar o banco de dados:', err);
+// });
 
 module.exports = {
     User: User,
