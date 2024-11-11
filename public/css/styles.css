@@ -494,7 +494,6 @@ body.dark-theme {
 @media (max-width: 600px) {
   .home .short-text p {
     font-size: 1rem;
-    text-align: center;
   }
 }
 @media (max-width: 768px) {
