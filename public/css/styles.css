@@ -572,9 +572,11 @@ body.dark-theme {
   }
 }
 .home .compromises .compromise {
-  margin: 10px 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Define o layout em colunas responsivas */
+  gap: 20px;
   padding: 30px 0;
-  display: flex;
+  margin: 10px 5px;
 }
 @media (max-width: 600px) {
   .home .compromises .compromise {
@@ -585,12 +587,12 @@ body.dark-theme {
 }
 @media (max-width: 768px) {
   .home .compromises .compromise {
-    display: block;
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 1024px) {
   .home .compromises .compromise {
-    display: block;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 .home .compromises .compromise .compromise-item:hover > .image {
@@ -600,14 +602,15 @@ body.dark-theme {
   display: block;
 }
 .home .compromises .compromise .compromise-item {
-  border: 3px solid 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   background: rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  margin: auto;
   padding: 15px;
-  width: calc(33.3333333333% - 30px);
   min-height: 450px;
 }
 @media (max-width: 600px) {
@@ -619,9 +622,11 @@ body.dark-theme {
 }
 @media (max-width: 768px) {
   .home .compromises .compromise .compromise-item {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .compromise .compromise-item {
+    width: 100%;
   }
 }
 @media (max-width: 1024px) {
@@ -663,9 +668,10 @@ body.dark-theme {
   font-size: 12px;
 }
 .home .compromises .compromise .compromise-item .comp-button {
-  margin: 10px 0;
+  margin-top: auto;
 }
 .home .compromises .compromise .compromise-item .comp-content {
+  margin-top: auto;
   display: none;
 }
 .home .compromises .compromise .compromise-item .comp-content p {
