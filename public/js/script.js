@@ -118,7 +118,7 @@ function openNews(news) {
     var content = document.querySelector("#news-content")
     
     modal.style.display = "flex"
-    title.innerHTML = news.querySelector("h3").innerText
+    title.innerHTML = news.querySelector("#alltitle").innerText
     content.innerHTML = news.querySelector("#allcontent").innerText
 
 }
