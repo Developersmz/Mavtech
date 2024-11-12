@@ -30,12 +30,12 @@
                         <nav class="nav">
                             <ul>
                                 <li><a href="#home" class="nav-item">home</a></li>
-                                <li><a href="#programs" class="nav-item">programs</a></li>
-                                <li><a href="#services" class="nav-item">services</a></li>
+                                <li><a href="#programs" class="nav-item">programas</a></li>
+                                <li><a href="#services" class="nav-item">projetos</a></li>
                                 <li><a href="#testimonies" class="nav-item">testemunhos</a></li>
                                 <li><a href="#blog" class="nav-item">blog</a></li>
                                 <li><a href="#about" class="nav-item">about</a></li>
-                                <li><a href="#contact" class="nav-item">contact</a></li>
+                                <li><a href="#contact" class="nav-item">contato</a></li>
                             </ul>
                         </nav>
                         <!-- Nav -->
@@ -177,7 +177,7 @@
             <div class="container">
                 <div class="row">
                     <div class="section-title">
-                        <h2>programs</h2>
+                        <h2>programas</h2>
                     </div>
                     <div class="about-content">
                         {{#programs}}
@@ -226,7 +226,7 @@
             <div class="container">
                 <div class="row">
                     <div class="section-title">
-                        <h2>services</h2>
+                        <h2>projetos</h2>
                     </div>
                     <div class="content">
                         {{#services}}
@@ -275,7 +275,7 @@
             <div class="container">
                 <div class="row">
                     <div class="section-title">
-                        <h2>Testimony</h2>
+                        <h2>Testemunhos</h2>
                     </div>
                     <div class="testi-intro">
                         {{#testimonies}}
@@ -381,10 +381,10 @@
                                                     <h3>{{title}}</h3>
                                                 </div>
                                                 <div class="content">
-                                                    <p>{{news}}</p>
+                                                    <p>{{ truncate news 150}}</p>
                                                 </div>
                                                 <div class="website">
-                                                    <p><a class="btn btn-4" id="check-news">click to check news</a></p>
+                                                    <p><a class="btn btn-4" id="check-news">ler notícia</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,12 +453,12 @@
                     <!-- Social Links -->
                     <div class="follow-us">
                         <h4>follow us</h4>
-                        <img src="img/bg-2.jpg" alt="">
+                        <img src="img/bg-2.jpg" alt="follow-us-img">
                         <div class="social-links">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.whatsapp.com/developersmz" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.whatsapp.com/developersmz" target="_blank"><i class="github"></i></a>
                         </div>
                         <!-- Mobile -->
                     <div class="mobile">
@@ -504,7 +504,7 @@
               <div class="footer-about">
                 <h3>Company</h3>
                 <ul>
-                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#programs">Programas</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="/mavtech/terms_conditions">Termos & Condições</a></li>
                     <li><a href="/mavtech/privacy_policy">Política e Privacidade</a></li>
@@ -516,9 +516,9 @@
                 <h3>Quick Links</h3>
                 <ul>
                   <li><a href="#home">Home</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#blog">Newsletter</a></li>
-                  <li><a href="#testimonies">Testimonies</a></li>
+                  <li><a href="#services">Projetos</a></li>
+                  <li><a href="#blog">atualizações</a></li>
+                  <li><a href="#testimonies">Testemunhos</a></li>
                   {{#if user.username}}
                     <li><a href="/auth/signout">Terminar sessão</a></li>
                     {{#if user.isAdmin}}
@@ -533,8 +533,8 @@
               
               <!-- Contact Info -->
               <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p>Phone: (+258) 850 115 183 | 875 338 427</p>
+                <h3>Contato</h3>
+                <p>Tel: (+258) 850 115 183 | 875 338 427</p>
                 <p>Email: <a href="">@mavtech596</a></p>
               </div>
               
@@ -549,7 +549,7 @@
 
               <!-- Social Media -->
               <div class="footer-hightlight">
-                <h3>Highlights</h3>
+                <h3>Destaques</h3>
                 <ul>
                     {{#each highlights}}
                         {{#if highlight}}
