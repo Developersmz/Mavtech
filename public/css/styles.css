@@ -1092,7 +1092,7 @@ body.dark-theme {
   padding: 30px;
 }
 .blog .newsletter .news .title h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 400;
   color: var(--color);
 }
@@ -1102,7 +1102,7 @@ body.dark-theme {
 }
 .blog .newsletter .news .content p {
   color: var(--color);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 .blog .newsletter .news .website p {
@@ -1156,7 +1156,7 @@ body.dark-theme {
   color: #fff;
 }
 .blog .news-modal .modal-content .modal-item p {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #fff;
 }
 
