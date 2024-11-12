@@ -495,7 +495,6 @@ body.dark-theme {
   color: #fff;
   margin: 15px 0 40px;
   font-family: inherit;
-  background-color: red;
 }
 @media (max-width: 600px) {
   .home .short-text p {
