@@ -1086,10 +1086,10 @@ body.dark-theme {
   object-fit: cover;
 }
 .blog .newsletter .news .news-content {
-  margin-top: 60%;
+  margin-top: 100%;
 }
 .blog .newsletter .news .title {
-  padding: 10% 30px 30px 30px;
+  padding: 30px;
 }
 .blog .newsletter .news .title h3 {
   font-size: 1.4rem;
