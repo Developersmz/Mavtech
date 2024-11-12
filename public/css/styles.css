@@ -1089,7 +1089,7 @@ body.dark-theme {
   margin-top: 60%;
 }
 .blog .newsletter .news .title {
-  padding: 30px;
+  padding: 10% 30px 30px 30px;
 }
 .blog .newsletter .news .title h3 {
   font-size: 1.4rem;
