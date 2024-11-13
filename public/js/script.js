@@ -63,21 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("theme", "light")
     } 
 
-    // Show all compromise content
-    const allBtn = document.querySelectorAll(".comp-button a")
-    allBtn.forEach((button) => {
-        button.addEventListener("click", (event) => {
-            const parentDiv = event.target.closest('.compromise-item')
-            parentDiv.classList.toggle('expanded')
-
-            if (parentDiv.classList.contains('expanded')) {
-                button.textContent = 'Ocultar';
-            } else {
-                button.textContent = 'Ver tudo';
-            }
-        })
-    })
-
     // Show/Hide news modal
     const closeModalBtn = document.querySelector("#close-news")
 

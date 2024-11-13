@@ -86,7 +86,7 @@
                                     {{/home}}
                                 </div>
                                 <div class="comp-button">
-                                    <a class="btn btn-2">ver tudo</a>
+                                    <a class="btn btn-2" onclick="toggleContent(this)">ver mais</a>
                                 </div>
                                 <div class="comp-content">
                                     {{#home}}
@@ -120,7 +120,7 @@
                                     {{/home}}
                                 </div>
                                 <div class="comp-button">
-                                    <a class="btn btn-2">ver tudo</a>
+                                    <a class="btn btn-2" onclick="toggleContent(this)">ver mais</a>
                                 </div>
                                 <div class="comp-content">
                                     {{#home}}
@@ -154,7 +154,7 @@
                                     {{/home}}
                                 </div>
                                 <div class="comp-button">
-                                    <a class="btn btn-2">ver tudo</a>
+                                    <a class="btn btn-2" onclick="toggleContent(this)">ver mais</a>
                                 </div>
                                 <div class="comp-content">
                                     {{#home}}
@@ -456,10 +456,10 @@
                         <h4>follow us</h4>
                         <img src="img/bg-2.jpg" alt="follow-us-img">
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.whatsapp.com/developersmz" target="_blank"><i class="github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
                         <!-- Mobile -->
                     <div class="mobile">
@@ -542,10 +542,10 @@
               <!-- Social Media -->
               <div class="footer-social">
                 <h3>Follow Us</h3>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Github"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
               </div>
 
               <!-- Social Media -->
@@ -568,6 +568,13 @@
         <!-- /Footer -->
 
         <script>
+            // Show all content (compromisse)
+            function toggleContent(button) {
+                const item = button.closest('.compromise-item');
+                item.classList.toggle('expanded');
+                button.textContent = item.classList.contains('expanded') ? 'Ver menos' : 'Ver mais';
+            }
+
             // Send email
             document.getElementById('contactForm').addEventListener('submit', async function (e) {
                 e.preventDefault()
