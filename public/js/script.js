@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     
+    // Footer current year
+    document.querySelector('#current-year').textContent = new Date().getFullYear()
+
     document.getElementById('searchButton').addEventListener('click', () => {
         const query = document.getElementById('searchInput').value.toLowerCase()
         const sections = document.querySelectorAll('.sec')
