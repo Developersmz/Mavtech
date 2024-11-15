@@ -108,7 +108,7 @@ main {
 }
 .container .btn {
   display: inline-block;
-  padding: 5px 30px;
+  padding: 7px 30px;
   border: 1px solid transparent;
   text-transform: capitalize;
   transition: all 0.3s ease;
