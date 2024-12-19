@@ -45,7 +45,8 @@ router.get('/mavtech', async (req, res) => {
             services: servicesData, 
             testimonies: testimoniesData,
             blogs: blogsData,
-            highlights: highlightsData
+            highlights: highlightsData,
+            title: "Mavtechnology | Mavtech"
         });
     } catch (error) {
         console.error("Erro ao carregar dados:", error);
@@ -55,12 +56,12 @@ router.get('/mavtech', async (req, res) => {
 
 // Terms and conditions
 router.get('/mavtech/terms_conditions', (req, res) => {
-    res.render('policy_privacy')
+    res.render('policy_privacy', { title: "Mavtechnology | Privacy policy" })
 })
 
 // Privacy and policy
 router.get('/mavtech/privacy_policy', (req, res) => {
-    res.render('terms_conditions')
+    res.render('terms_conditions', { title: "Mavtechnology | Terms & Conditions" })
 })
 
 

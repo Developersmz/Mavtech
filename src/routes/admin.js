@@ -31,12 +31,13 @@ router.get('/dashboard', checkLogin, checkAdmin, async (req, res) => {
         numberTestimonies: numberTestimonies,
         numberBlog: numberBlog,
         admin,
-        date
+        date,
+        title: "Mavtechnology | Dashboard"
     })
 })
 
 router.get('/dashboard/add', checkLogin, checkAdmin, async (req, res) => {
-    res.render('add')
+    res.render('add', { title: "Mavtechnology | Add" })
 })
 
 router.post('/dashboard/add/values', upload.single('image'), async (req, res) => {
