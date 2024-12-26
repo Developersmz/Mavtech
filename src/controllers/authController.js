@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer')
 const crypto = require('crypto')
 const bcrypt = require('bcryptjs')
 
-const createUser = async (req, res) => {
+const createUser = async (req, res, next) => {
     const { username, email, password, confirmPassword } = req.body
 
     try {
@@ -17,22 +17,31 @@ const createUser = async (req, res) => {
 
         if (existingUser) {
             if (existingUser.email === email) {
-                return res.render('signup', { error: 'E-mail já registrado.' });
+                return res.render('signup', { error: 'E-mail já registrado. Use outro ou faça login.' });
             }
             if (existingUser.username === username) {
-                return res.render('signup', { error: 'Nome de usuário já registrado.' });
+                return res.render('signup', { error: 'Nome de usuário em uso. Tente outro.' });
             }
         }
-        if (password != confirmPassword) {
+        if (password !== confirmPassword) {
             return res.render('signup', { error: 'Palavras-passe não coincidem, verifique e tente novamente.' })
         }
-        const createUser = await User.create({
+        // Criar o novo usuário
+        const newUser = await User.create({
             username,
             email,
             password
-        })
+        });
 
-        res.redirect('/mavtech')
+        // Realizar login automaticamente após criar o usuário
+        req.login(newUser, (err) => {
+            if (err) {
+                return next(err);
+            }
+
+            // Se o login for bem-sucedido, redireciona para a página inicial
+            return res.redirect('/mavtech?logged_in=true');
+        });
     } catch (error) {
         console.error(error);
         res.render('signup', { error: 'Erro ao registrar o usuário, tente novamente.' })
@@ -51,7 +60,6 @@ const logUser = async (req, res, next) => {
             if (err) {
                 return next(err)
             }
-            req.session.userId = user.id
             return res.redirect('/mavtech?logged_in=true')
         })
     })(req, res, next)

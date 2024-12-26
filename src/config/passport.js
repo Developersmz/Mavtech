@@ -39,32 +39,29 @@ try {
 
 // Middleware para verificar se o user esta logado
 function checkLogin(req, res, access) {
-    if (req.session.userId) {
-        access()
-    } else {
-        res.redirect('/auth/signin')
+    if (req.isAuthenticated()) {
+        return access()
     }
+
+    res.redirect('/auth/signin')
 }
 
 // Checar se tem permissoes de administrador
 function checkAdmin(req, res, access){
-    if (req.session.passport && req.session.passport.user){
+    if (req.isAuthenticated() && req.session.passport.user){
         User.findByPk(req.session.passport.user)
         .then(user => {
             if (user && user.isAdmin) {
-                access()
-            } else {
-                res.status(403).send('<h1>Acesso negado</h1><br><a href="/">Voltar</a>');
-            }
+                return access()
+            } 
+            res.status(403).send('<h1>Acesso negado</h1><br><a href="/">Voltar</a>');
         })
         .catch(err => {
             console.error(err)
             res.status(500).send('Erro interno do servidor')
         })
     }
-    else{
-        res.redirect('/mavtech/signin')
-    }
+    
 }
 
 module.exports = {

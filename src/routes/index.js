@@ -19,7 +19,7 @@ router.get('/mavtech', async (req, res) => {
         const blogs = await Blog.findAll()
         const highlights = await Highlight.findAll()
 
-        const userId = req.session.userId;
+        const userId = req.session.passport ? req.session.passport.user : null;
         let user = null;
 
         if (userId) {
